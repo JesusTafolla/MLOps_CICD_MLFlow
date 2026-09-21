@@ -30,6 +30,6 @@ with mlflow.start_run():
     mlflow.log_metric("accuracy", accuracy)
     mlflow.sklearn.log_model(
         model,
-        name="model",
+        artifact_path="model",
         skops_trusted_types=["sklearn.tree._tree.Tree"]
     )
